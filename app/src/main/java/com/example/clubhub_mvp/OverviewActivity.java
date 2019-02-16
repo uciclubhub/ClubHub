@@ -6,9 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.loopj.android.http.*;
+
 public class OverviewActivity extends AppCompatActivity {
 
     Button eventImage, mainEvent, event1, event2, event3, event4, event5, event6;
+
+    AsyncHttpClient client = new AsyncHttpClient();
 
 
     @Override
@@ -69,5 +73,47 @@ public class OverviewActivity extends AppCompatActivity {
             }
         });
 
+        event3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OverviewActivity.this,EventActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_up, R.anim.fade_out);
+                finish();
+
+            }
+        });
+
+        event4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OverviewActivity.this, EventActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_up, R.anim.fade_out);
+                finish();
+
+            }
+        });
+        event5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OverviewActivity.this,EventActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_up, R.anim.fade_out);
+                finish();
+
+            }
+        });
+
+        event6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OverviewActivity.this, EventActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_up, R.anim.fade_out);
+                finish();
+
+            }
+        });
     }
 }
